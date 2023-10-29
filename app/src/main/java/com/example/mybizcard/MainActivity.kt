@@ -52,8 +52,8 @@ class MainActivity : ComponentActivity() {
             MyBizCardTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
-
-                    color = MaterialTheme.colorScheme.background
+                    modifier = Modifier.fillMaxSize(),
+                    color = MaterialTheme.colorScheme.background,
                 ) {
                     CreateBizCard()
                 }
@@ -132,16 +132,17 @@ fun Content(){
             Portfolio(data = listOf(
                 "Project 1",
                 "Project 2",
-                "Project 3"))
+                "Project 3",
+                "Project 4"))
         }
     }
 }
 
 @Composable
 fun Portfolio(data: List<String>) {
-    LazyColumn{
-        items(data){
-            item ->  Text(item)
+    LazyColumn(){
+        items(data){ item ->
+            Text(item)
         }
     }
 }
