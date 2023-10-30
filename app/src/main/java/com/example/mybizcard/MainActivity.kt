@@ -140,11 +140,22 @@ fun Content(){
 
 @Composable
 fun Portfolio(data: List<String>) {
-    LazyColumn(){
-        items(data){ item ->
-            Text(item)
+    LazyColumn{
+        items(data) { item ->
+            Card(modifier = Modifier
+                .padding(13.dp)
+                .fillMaxWidth(),
+                shape = RectangleShape,
+                ) {
+
+
+
+
+            }
+
         }
     }
+
 }
 
 @Composable
